@@ -1,0 +1,6 @@
+pokedexcli
+*.exe
+*.out
+vendor/
+.env
+.vscode/
