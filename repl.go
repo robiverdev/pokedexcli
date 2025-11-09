@@ -29,7 +29,10 @@ func startRepl() {
 			fmt.Println("Invalid command")
 			continue
 		}
-		command.callback()
+		err := command.callback()
+		if err != nil {
+			fmt.Println("Error: ", err)
+		}
 	}
 }
 
