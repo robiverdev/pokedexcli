@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func startRepl() {
@@ -12,7 +13,13 @@ func startRepl() {
 		fmt.Print("Enter some text: ")
 		scanner.Scan()
 		text := scanner.Text()
-
-		fmt.Println("You've entered:", text)
+		cleaned := cleanInput(text)
+		fmt.Println("You've entered:", cleaned)
 	}
+}
+
+func cleanInput(str string) []string {
+	lowerCase := strings.ToLower(str)
+	words := strings.Fields(lowerCase)
+	return words
 }
