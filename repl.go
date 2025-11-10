@@ -54,14 +54,14 @@ func getCommands() map[string]cliCommand {
 			callback:    callbackExit,
 		},
 		"map": {
-			name: "map",
+			name:        "map",
 			description: "List next page oflocation areas",
-			callback: callbackMap,
+			callback:    callbackMap,
 		},
 		"mapb": {
-			name: "mapb",
+			name:        "mapb",
 			description: "List previous page of location areas",
-			callback: callbackMapPrev,
+			callback:    callbackMapPrev,
 		},
 	}
 }
