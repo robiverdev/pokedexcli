@@ -9,7 +9,7 @@ import (
 func callbackMap(cfg *config) error {
 	resp, err := cfg.pokeapiClient.ListLocationAreas(cfg.nextLocatonAreaURL)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	fmt.Println("Location areas:")
 	for _, area := range resp.Result {
@@ -26,7 +26,7 @@ func callbackMapPrev(cfg *config) error {
 	}
 	resp,err := cfg.pokeapiClient.ListLocationAreas(cfg.previousLocationAreURL)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 	fmt.Println("Location areas:")
 	for _, area := range resp.Result{
